@@ -23,8 +23,8 @@
         <select id="shapes" name="shapes"><option value="mixed">Círculo, cuadrado y triángulo</option><option value="rounded">Círculo, rombo y hexágono</option></select>
         <button type="submit">Aplicar cambios</button>
       </form>
-      <button id="restart" class="secondary" type="button">Nueva partida</button>
-      <button id="help-toggle" class="secondary" type="button" aria-expanded="false" aria-controls="help">¿Cómo se juega?</button>
+      
+
       <aside id="help" class="help" hidden><h3>Instrucciones</h3><p>Arrastra una ficha hasta otra para intercambiarlas. También puedes seleccionar dos casillas con clic o teclado. Ganas cuando cada fila contiene fichas del mismo tipo.</p><p>Al cambiar la configuración se inicia otra partida. Puedes jugar con cualquier dimensión entre 3 y 12.</p></aside>
     </section>
     <section class="panel game" aria-labelledby="board-title">
@@ -32,6 +32,10 @@
       <p id="status" role="status" aria-live="polite">Preparando tablero...</p>
       <div class="board-scroll"><div id="board" class="board" aria-label="Tablero de juego"></div></div>
       <p class="hint">Arrastra una ficha sobre otra para intercambiarlas.</p>
+      <div class="game-actions">
+      <button id="restart" class="secondary" type="button">Nueva partida</button>
+      <button id="help-toggle" class="secondary" type="button" aria-expanded="false" aria-controls="help">¿Cómo se juega?</button>
+      </div>
     </section>
   </main>
   <footer><p>Laboratorio de Interacción Persona-Ordenador · Equipo Argentina</p></footer>
