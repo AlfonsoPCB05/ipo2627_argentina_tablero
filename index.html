@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablero de fichas | IPO</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header"><h1>Tablero de fichas</h1><p>Ordena las fichas para que cada fila sea de un solo tipo.</p></header>
+  <main class="layout">
+    <section class="panel controls" aria-labelledby="settings-title">
+      <h2 id="settings-title">Configuración</h2>
+      <form id="settings-form">
+        <label for="dimension">Dimensión del tablero</label>
+        <input id="dimension" name="dimension" type="number" min="3" max="12" value="3" required>
+        <label for="size">Tamaño de las fichas</label>
+        <select id="size" name="size"><option value="small">Pequeñas</option><option value="medium" selected>Medianas</option><option value="large">Grandes</option></select>
+        <label for="palette">Colores de las fichas</label>
+        <select id="palette" name="palette"><option value="classic">Azul, naranja y verde</option><option value="alternate">Morado, rojo y turquesa</option></select>
+        <label for="shapes">Formas de las fichas</label>
+        <select id="shapes" name="shapes"><option value="mixed">Círculo, cuadrado y triángulo</option><option value="rounded">Círculo, rombo y hexágono</option></select>
+        <button type="submit">Aplicar cambios</button>
+      </form>
+      <button id="restart" class="secondary" type="button">Nueva partida</button>
+      <button id="help-toggle" class="secondary" type="button" aria-expanded="false" aria-controls="help">¿Cómo se juega?</button>
+      <aside id="help" class="help" hidden><h3>Instrucciones</h3><p>Arrastra una ficha hasta otra para intercambiarlas. También puedes seleccionar dos casillas con clic o teclado. Ganas cuando cada fila contiene fichas del mismo tipo.</p><p>Al cambiar la configuración se inicia otra partida. Puedes jugar con cualquier dimensión entre 3 y 12.</p></aside>
+    </section>
+    <section class="panel game" aria-labelledby="board-title">
+      <div class="game-header"><h2 id="board-title">Partida</h2><span id="moves">Movimientos: 0</span></div>
+      <p id="status" role="status" aria-live="polite">Preparando tablero...</p>
+      <div class="board-scroll"><div id="board" class="board" aria-label="Tablero de juego"></div></div>
+      <p class="hint">Arrastra una ficha sobre otra para intercambiarlas.</p>
+    </section>
+  </main>
+  <footer><p>Laboratorio de Interacción Persona-Ordenador · Equipo Argentina</p></footer>
+</body>
+</html>
